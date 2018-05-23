@@ -4,7 +4,7 @@ const util = require('util');
 const Promise = require('bluebird');
 const exec = require('child_process').exec;
 
-const PATH_MOCK_API = path.resolve( '../../../../../mockapi');
+const PATH_MOCK_API = path.resolve( './_mockapi');
 
 const PATH_MOCK_API_SCHEMA = path.resolve( PATH_MOCK_API, './schema' );
 const PATH_MOCK_API_SCRIPTS = path.resolve( PATH_MOCK_API, './scripts' );
