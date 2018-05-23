@@ -1,6 +1,6 @@
 {
-  "name": "mockapi",
-  "version": "1.0.1",
+  "name": "@jimib/mockapi",
+  "version": "1.0.2",
   "main": "index.js",
   "license": "UNLICENCED",
   "scripts": {
