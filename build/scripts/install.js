@@ -17,7 +17,7 @@ const PATH_BUILD = path.resolve( __dirname, '../../build' );
 
 const PATH_PACKAGE = path.resolve( DIR_ROOT, 'package.json');
 const SCRIPTS = {
-	"api:run": "json-server --watch ./mockapi/store/db.json --port 4000",
+	"api:run": "json-server --routes ./mockapi/routes.json --watch ./mockapi/store/db.json --port 4000",
 	"api:run:hotload": "concurrently --kill-others \"npm run api:run\" \"npm run api:build:hotload\"",
 	"api:build": "node ./mockapi/scripts/build.js",
 	"api:build:hotload": "nodemon ./mockapi/scripts/build.js"
