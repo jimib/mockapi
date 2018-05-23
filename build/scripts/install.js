@@ -75,7 +75,6 @@ function ensureFileExists( dir, handler ){
 }
 
 function ensureExists( path, handler ){
-	console.log('ensure exists', path);
 	//check for the existence
 	return fs.existsAsync( path )
 	.then( exists => {
