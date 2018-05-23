@@ -1,0 +1,4 @@
+{
+	"/users/employed": "/users?employed=true",
+	"/users/unemployed": "/users?employed=false"
+}

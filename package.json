@@ -1,0 +1,9 @@
+{
+  "name": "mockapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENCED",
+  "scripts" : {
+    "postinstall" : "node ./build/scripts/build.js"
+  }
+}
