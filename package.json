@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "UNLICENCED",
   "scripts": {
-    "postinstall-off": "node ./build/scripts/build.js"
+    "postinstall": "node ./build/scripts/build.js"
   },
   "devDependencies": {
     "bluebird": "^3.5.1",
