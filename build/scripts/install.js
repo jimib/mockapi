@@ -4,7 +4,7 @@ const util = require('util');
 const Promise = require('bluebird');
 const exec = require('child_process').exec;
 
-const PATH_MOCK_API = path.resolve( './_mockapi');
+const PATH_MOCK_API = path.resolve( '../../../_mockapi');
 
 const PATH_MOCK_API_SCHEMA = path.resolve( PATH_MOCK_API, './schema' );
 const PATH_MOCK_API_SCRIPTS = path.resolve( PATH_MOCK_API, './scripts' );
@@ -29,7 +29,7 @@ Promise.mapSeries([
 	() => ensureFileExists( PATH_MOCK_API_ROUTES, ( file ) => fs.copyAsync( path.resolve( PATH_BUILD, 'routes.json'), file ) ),
 	() => ensureDirExists( PATH_MOCK_API_STORE ),
 	() => addPackageScripts(),
-	() => ensureFileExists( PATH_MOCK_API_STORE_DB, () => execPromise( exec( 'npm run api:build', { cwd: path.resolve('.') } ) ) )
+	() => ensureFileExists( PATH_MOCK_API_STORE_DB, () => execPromise( exec( 'npm run api:build', { cwd: path.resolve('../../../') } ) ) )
 ], handler => handler() )
 .then( result => {
 	//all files are in place
