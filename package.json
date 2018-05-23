@@ -1,10 +1,10 @@
 {
   "name": "@jimib/mockapi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "license": "UNLICENCED",
   "scripts": {
-    "postinstall": "node ./build/scripts/build.js"
+    "postinstall": "node ./build/scripts/install.js"
   },
   "devDependencies": {
     "bluebird": "^3.5.1",
