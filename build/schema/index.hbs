@@ -1,13 +1,12 @@
 {
-	"products": [
-		{{#repeat 10}}
-		{{{import "product.hbs"}}}
-		{{/repeat}}
-	],
 	"users": [
-		{{#repeat 100}}
+		{{#repeat 5}}
 		{{{import "user.hbs"}}}
 		{{/repeat}}
 	],
-	"greeting" : "{{hello}}"
+	"products": [
+		{{#repeat 5}}
+		{{{import "product.hbs"}}}
+		{{/repeat}}
+	]
 }
