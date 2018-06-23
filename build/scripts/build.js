@@ -5,12 +5,16 @@ const path = require('path');
 const dummyjson = require('dummy-json');
 const Handlebars = require('handlebars');
 
-
 Handlebars.registerHelper('import', function( path ){
 	var data = loadSchema( path );
 	return JSON.stringify( data );
 });
 
+const helpers = require('../schema/helpers');
+
+for( var id in helpers ){
+	Handlebars.registerHelper( id, helpers[id] );
+}
 
 fs.writeJSONAsync( path.resolve( __dirname, '../store/db.json'), loadSchema('index.hbs') );
 
